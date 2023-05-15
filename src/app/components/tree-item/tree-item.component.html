@@ -1,0 +1,17 @@
+<!-- <div cdkDropList (cdkDropListDropped)="drop($event)"> -->
+<div class="tree-item" cdkDrag>
+    <span *ngIf="item?.children" (click)="toggleCollapse()" [class.collapsed]="isCollapsed" class="toggle">
+        <i class="fas" [ngClass]="isCollapsed ? 'fa-plus' : 'fa-minus'"></i>
+        <span *ngIf="isCollapsed">+</span>
+        <span *ngIf="!isCollapsed">-</span>
+    </span>
+    <input type="text" [value]="item?.name" placeholder="Enter parent name">
+    <!-- <button (click)="addParent()">Add Parent</button> -->
+    <!-- {{ item?.name }} -->
+    <ul *ngIf="!isCollapsed && item?.children">
+        <li *ngFor="let child of item?.children">
+            <app-tree-item [item]="child"></app-tree-item>
+        </li>
+    </ul>
+</div>
+<!-- </div> -->
