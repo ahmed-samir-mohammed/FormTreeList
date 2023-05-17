@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TreeItemComponent } from './components/tree-item/tree-item.component';
 import { TreeListComponent } from './components/tree-list/tree-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DragDropModule
+    DragDropModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

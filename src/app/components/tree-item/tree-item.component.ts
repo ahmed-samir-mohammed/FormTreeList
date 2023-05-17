@@ -10,7 +10,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   styleUrls: ['./tree-item.component.scss']
 })
 export class TreeItemComponent {
-  @Input() item: TreeItem | undefined;
+  @Input() item: TreeItem | any;
   isCollapsed = false;
 
   toggleCollapse() {
@@ -19,12 +19,10 @@ export class TreeItemComponent {
 
   drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
-      moveItemInArray(
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
+      // السحب والإسقاط داخل نفس القائمة
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
+      // السحب والإسقاط بين قوائم مختلفة
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,

@@ -1,0 +1,26 @@
+.tree-item-header {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    margin-bottom: .5rem;
+
+    .btn-collaps {
+        background: none;
+        width: 2rem;
+        height: 2rem;
+        margin-inline-end: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.tree-item {
+
+
+    .tree-item {
+        padding-inline-start: 1rem;
+    }
+}
